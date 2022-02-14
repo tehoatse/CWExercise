@@ -53,6 +53,9 @@ namespace CouncilWise
 
             items = new List<ReceiptItem>();
             items.Add(new ReceiptItem { Name = "freebie eibeerf", Quantity = 4, UnitPrice = 1.15m, IncludesTax = true });
+            items.Add(new ReceiptItem { Name = "glenelg", Quantity = 4, UnitPrice = 1.15m, IncludesTax = true });
+            items.Add(new ReceiptItem { Name = "deeddeed", Quantity = 4, UnitPrice = 1.15m, IncludesTax = true });
+            items.Add(new ReceiptItem { Name = "tattarrattat", Quantity = 4, UnitPrice = 1.15m, IncludesTax = true });
             receiptResult = ProcessReceiptItems(items);
             Console.WriteLine(receiptResult.ToString());
 
@@ -66,7 +69,7 @@ namespace CouncilWise
         /// <returns>processed receipt</returns>
         static Receipt ProcessReceiptItems(ICollection<ReceiptItem> items)
         {
-            throw new NotImplementedException();
+            return new Receipt(items);
         }
     }
 }
